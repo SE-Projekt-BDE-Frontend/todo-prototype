@@ -10,17 +10,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch } from "vue" // @ is an alias to /src
+import { defineComponent, reactive, ref, watch } from "vue" // @ is an alias to /src
 
 export default defineComponent({
   name: "Home",
   setup() {
-    const todos = ref([{ title: "A", done: false }])
+    const todos = reactive([{ title: "A", done: false }])
 
-    const addTodo = (title: string) => todos.value.push({ title, done: false })
+    const addTodo = (title: string) => todos.push({ title, done: false })
 
-    watch(todos.value, (todos, newTodos) => {
-      alert(JSON.stringify(newTodos))
+    watch(todos, (todos, newTodos) => {
+      console.log(todos)
     })
 
     return { todos, addTodo }
