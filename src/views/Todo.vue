@@ -19,9 +19,8 @@ export default defineComponent({
 
     const addTodo = (title: string) => todos.value.push({ title, done: false })
 
-    watch(todos, (todos, newTodos) => {
-      // FIXME: watch does not fire
-      alert(newTodos)
+    watch(todos.value, (todos, newTodos) => {
+      alert(JSON.stringify(newTodos))
     })
 
     return { todos, addTodo }
