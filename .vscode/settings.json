@@ -1,0 +1,6 @@
+{
+  "vetur.validation.style": false,
+  "tailwindCSS.includeLanguages": {
+    "Vue": "html"
+  }
+}
