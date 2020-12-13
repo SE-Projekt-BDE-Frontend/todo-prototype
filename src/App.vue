@@ -1,8 +1,10 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <nav
+    class="p-4 bg-purple-500 text-white flex justify-center gap-x-6 font-bold"
+  >
+    <router-link to="/" active-class="underline">Todo</router-link>
+    <router-link to="/about" active-class="underline">About</router-link>
+  </nav>
   <router-view />
 </template>
 
@@ -12,23 +14,6 @@
 @tailwind utilities;
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  @apply container mx-auto px-24;
 }
 </style>
