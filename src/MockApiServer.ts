@@ -1,7 +1,8 @@
 import { createServer, Model, RestSerializer } from "miragejs"
+import { TodoDetails } from "./lib/TodoService"
 
 const mockModels = {
-  todo: Model.extend<Partial<{ title: string; done: boolean }>>({}),
+  todo: Model.extend<Partial<TodoDetails>>({}),
 }
 
 export function makeServer({ environment = "development" } = {}) {
