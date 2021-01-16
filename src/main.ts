@@ -8,4 +8,7 @@ if (process.env.NODE_ENV === "development") {
   makeServer()
 }
 
+// import axios from "axios"
+// ;(window as any).axios = axios
+
 createApp(App).use(router).mount("#app")
